@@ -25,15 +25,8 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
     }
 
-    /**
-     * This method is called when the order button is clicked.
-     */
-
-
-    public void showMap(Uri geoLocation) {
-
-    }
-
+   
+     //This is method returns order summary in a message.
     public String createOrderSummary(int quantity , boolean checkBox , boolean checkBox2 , Editable edit , int price){
        String message = "Name: " + edit + "\nQuantity: " + quantity;
        message = message + "\nAdd Whipped Cream? " + checkBox ;
@@ -41,14 +34,15 @@ public class MainActivity extends AppCompatActivity {
        message = message + "\nTotal: $ " + price ;
        message = message + "\nThank You!";
        return  message ;
-
-
     }
 
+    
+    
     int quantity = 0;
 
     int price = 0 ;
 
+    //This method is called when the order button is clicked.
     public void submitOrder(View view) {
 
         CheckBox whippedCream = (CheckBox) findViewById(R.id.check_button);
@@ -91,10 +85,15 @@ public class MainActivity extends AppCompatActivity {
        displayMessage(message);
     }
 
+    
+    //increment for quantities of coffees
     public void increment(View view) {
          quantity = quantity +1;
         display(quantity);
     }
+    
+    
+    //decrement for quanities of coffees
     public void decrement(View view) {
        if (quantity <= 1){
            quantity = 1;
@@ -103,7 +102,7 @@ public class MainActivity extends AppCompatActivity {
            int duration =Toast.LENGTH_SHORT;
            Toast toast = Toast.makeText(context , text , duration);
             toast.show();
-           return;
+             return;
        }
 
         quantity = quantity - 1;
