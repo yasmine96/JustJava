@@ -8,13 +8,13 @@ An app to order coffee with all details and send order on your mail.
 
 ## when you open the app
 
-<img src='img1.PNG' >
+<img src='img/img2.PNG' >
 
 ## then you check toppings if you want and click order.
-<img src='img2.PNG' >
+<img src='img/img3.PNG' >
 
 ## then all details is sent to email
-<img src='img3.PNG' >
+<img src='img/img1.PNG' >
 
 
 
